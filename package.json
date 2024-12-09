@@ -6,13 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint",
+    "lint:changed": "eslint --no-warn-ignored $(git diff --name-only --diff-filter=d HEAD)",
+    "lint:fix": "npm run lint:changed -- --fix",
+    "lint:inspect": "npx eslint --inspect-config"
   },
   "dependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
     "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.16.0",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
     "vue-tsc": "^2.1.10"
