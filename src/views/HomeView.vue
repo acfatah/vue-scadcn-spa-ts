@@ -10,7 +10,8 @@
     </div>
     <h1 class="text-3xl font-bold">
       <!-- The icon is used to test unplugin-vue-components -->
-      <SquareCheckIcon class="inline-block -translate-y-1" /> Hello Vite and Vue!
+      <!-- The cn method is used to test unplugin-auto-import -->
+      <SquareCheckIcon class="inline-block -translate-y-1" :class="cn('text-red-500', 'text-green-500')" /> Hello Vite and Vue!
     </h1>
   </div>
 </template>
