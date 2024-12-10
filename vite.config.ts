@@ -2,7 +2,9 @@ import { fileURLToPath, URL } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import autoprefixer from 'autoprefixer'
 import tailwind from 'tailwindcss'
+import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+import { resolvers } from './src/components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,7 +13,17 @@ export default defineConfig({
       plugins: [autoprefixer, tailwind()],
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Components({
+      dirs: [
+        'src/components/ui',
+        'src/components/extras',
+        'src/components/layouts',
+      ],
+      resolvers,
+    }),
+  ],
   resolve: {
     alias: {
       '~': fileURLToPath(new URL('./src', import.meta.url)),

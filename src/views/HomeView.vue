@@ -9,7 +9,8 @@
       </a>
     </div>
     <h1 class="text-3xl font-bold">
-      Hello Vite and Vue!
+      <!-- The icon is used to test unplugin-vue-components -->
+      <SquareCheckIcon class="inline-block -translate-y-1" /> Hello Vite and Vue!
     </h1>
   </div>
 </template>
