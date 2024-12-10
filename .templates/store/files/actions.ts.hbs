@@ -1,0 +1,11 @@
+import type { State } from './state'
+
+export interface Actions {
+  increment: () => void
+}
+
+export const actions: Actions = {
+  increment(this: State) {
+    this.count++
+  },
+}

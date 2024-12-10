@@ -1,0 +1,9 @@
+import type { State } from './state.ts'
+
+export interface Getters {
+  [key: string]: (state: State) => any
+}
+
+export const getters: Getters = {
+  doubleCount: (state: State) => state.count * 2,
+}
