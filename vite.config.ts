@@ -17,6 +17,11 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
+      include: [
+        /\.[tj]sx?$/,
+        /\.vue$/,
+        /\.vue\?vue/,
+      ],
       dts: true,
       vueTemplate: true,
       dirs: [
