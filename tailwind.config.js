@@ -1,3 +1,4 @@
+const typography = require('@tailwindcss/typography')
 const animate = require('tailwindcss-animate')
 
 /** @type {import('tailwindcss').Config} */
@@ -24,6 +25,10 @@ module.exports = {
     },
 
     extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', 'sans-serif'],
+      },
+
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -115,5 +120,8 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [
+    typography,
+    animate,
+  ],
 }

@@ -1,6 +1,16 @@
+@import url('~/styles/chart.css');
+@import url('~/styles/sidebar.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+  }
+}
 
 @layer base {
   :root {
