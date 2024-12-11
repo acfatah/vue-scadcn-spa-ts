@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useDark } from '~/components/composables/use-dark'
-import BlankLayout from '~/components/layouts/BlankLayout.vue'
+import DefaultLayout from '~/components/layouts/DefaultLayout.vue'
 
 const route = useRoute()
 
@@ -13,5 +13,5 @@ onMounted(() => {
   <Teleport to="body">
     <Toaster />
   </Teleport>
-  <component :is="route.meta.layout || BlankLayout" />
+  <component :is="route.meta.layout || DefaultLayout" />
 </template>
