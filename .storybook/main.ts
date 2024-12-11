@@ -7,9 +7,11 @@ const config: StorybookConfig = {
   ],
   addons: [
     '@storybook/addon-onboarding',
+    '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
+    '@storybook/addon-themes',
     '@storybook/addon-interactions',
+    // '@chromatic-com/storybook',
   ],
   framework: {
     name: '@storybook/vue3-vite',
