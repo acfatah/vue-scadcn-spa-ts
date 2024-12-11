@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
+import { useDark } from '~/components/composables/use-dark'
 import BlankLayout from '~/components/layouts/BlankLayout.vue'
 
 const route = useRoute()
+
+onMounted(() => {
+  useDark()
+})
 </script>
 
 <template>
-  <component :is="route.meta.layout || BlankLayout">
-    <RouterView />
-  </component>
+  <Teleport to="body">
+    <Toaster />
+  </Teleport>
+  <component :is="route.meta.layout || BlankLayout" />
 </template>
