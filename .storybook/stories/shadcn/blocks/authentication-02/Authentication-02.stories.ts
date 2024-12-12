@@ -1,7 +1,8 @@
 import { vueRouter } from 'storybook-vue3-router'
 import App from '~/App.vue'
+import { Toaster } from '~/components/ui/toast'
 import routes from './routes.ts'
-import DefaultSource from './views/LoginView.vue?raw'
+import DefaultSource from './views/Login/LoginView.vue?raw'
 
 export default {
   title: 'shadcn/Blocks/Authentication-02',
@@ -25,4 +26,9 @@ export const Default = {
       },
     },
   },
+
+  render: () => ({
+    components: { App, Toaster },
+    template: '<Toaster /><App />',
+  }),
 }
