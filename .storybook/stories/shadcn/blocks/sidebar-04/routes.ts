@@ -1,4 +1,4 @@
-import SidebarSimpleLayout from './layouts/SidebarSimpleLayout.vue'
+import SidebarCollapseLayout from './layouts/SidebarFloatingLayout.vue'
 import DashboardView from './views/DashboardView.vue'
 
 export default [
@@ -7,7 +7,7 @@ export default [
     name: 'dashboard',
     component: DashboardView,
     meta: {
-      layout: SidebarSimpleLayout,
+      layout: SidebarCollapseLayout,
     },
   },
 ]
