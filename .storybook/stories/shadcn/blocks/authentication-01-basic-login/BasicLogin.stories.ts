@@ -5,7 +5,7 @@ import routes from './routes.ts'
 import DefaultSource from './views/LoginView.vue?raw'
 
 export default {
-  title: 'shadcn/Blocks/02 Login',
+  title: 'shadcn/Blocks/Authentication 01 Basic Login',
   component: App,
   tags: ['autodocs'],
 

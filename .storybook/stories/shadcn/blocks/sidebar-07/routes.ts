@@ -1,11 +1,11 @@
 import SidebarCollapseLayout from './layouts/SidebarCollapseLayout.vue'
-import Dashboard from './views/Dashboard.vue'
+import DashboardView from './views/DashboardView.vue'
 
 export default [
   {
     path: '/',
     name: 'dashboard',
-    component: Dashboard,
+    component: DashboardView,
     meta: {
       layout: SidebarCollapseLayout,
     },

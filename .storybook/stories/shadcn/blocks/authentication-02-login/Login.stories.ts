@@ -1,15 +1,16 @@
 import { vueRouter } from 'storybook-vue3-router'
 import App from '~/App.vue'
+import { Toaster } from '~/components/ui/toast'
 import routes from './routes.ts'
-import DefaultSource from './views/RegisterView.vue?raw'
+import DefaultSource from './views/LoginView.vue?raw'
 
 export default {
-  title: 'shadcn/Blocks/03 Register',
+  title: 'shadcn/Blocks/Authentication 02 Login',
   component: App,
   tags: ['autodocs'],
 
   decorators: [vueRouter(routes, {
-    initialRoute: '/register',
+    initialRoute: '/login',
   })],
 
   parameters: {
@@ -25,4 +26,9 @@ export const Default = {
       },
     },
   },
+
+  render: () => ({
+    components: { App, Toaster },
+    template: '<Toaster /><App />',
+  }),
 }

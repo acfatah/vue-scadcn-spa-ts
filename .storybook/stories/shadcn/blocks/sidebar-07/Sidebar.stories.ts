@@ -1,18 +1,16 @@
 import { vueRouter } from 'storybook-vue3-router'
 import App from '~/App.vue'
-import { Toaster } from '~/components/ui/toast'
+import DefaultSource from './layouts/SidebarCollapseLayout.vue?raw'
 import routes from './routes.ts'
-import DefaultSource from './views/LoginView.vue?raw'
 
+/**
+ * A sidebar that collapses to icons.
+ */
 export default {
-  title: 'shadcn/Blocks/01 Basic Login',
+  title: 'shadcn/Blocks/Sidebar 07',
   component: App,
   tags: ['autodocs'],
-
-  decorators: [vueRouter(routes, {
-    initialRoute: '/login',
-  })],
-
+  decorators: [vueRouter(routes)],
   parameters: {
     layout: 'fullscreen',
   },
@@ -26,9 +24,4 @@ export const Default = {
       },
     },
   },
-
-  render: () => ({
-    components: { App, Toaster },
-    template: '<Toaster /><App />',
-  }),
 }
