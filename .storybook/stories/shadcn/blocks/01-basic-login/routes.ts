@@ -1,5 +1,5 @@
 import CenteredLayout from './layouts/CenteredLayout.vue'
-import LoginView from './views/Login/LoginView.vue'
+import LoginView from './views/LoginView.vue'
 
 export default [
   {
