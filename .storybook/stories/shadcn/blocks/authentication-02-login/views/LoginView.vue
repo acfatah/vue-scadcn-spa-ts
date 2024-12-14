@@ -17,6 +17,7 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>
 const formSchema = toTypedSchema(schema)
+const loading = ref(false)
 
 function onSubmit(values: FormValues) {
   toast({
@@ -29,6 +30,7 @@ function onSubmit(values: FormValues) {
 <template>
   <Card class="w-full max-w-sm">
     <Form
+      v-slot="{ meta }"
       class="w-full"
       :validation-schema="formSchema"
       @submit="onSubmit"
@@ -76,7 +78,11 @@ function onSubmit(values: FormValues) {
       </CardContent>
 
       <CardFooter class="grid gap-4">
-        <Button type="submit" class="w-full">
+        <Button
+          type="submit"
+          class="w-full"
+          :disabled="loading || (meta.touched && !meta.valid)"
+        >
           Login
         </Button>
 
