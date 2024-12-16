@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<{
     <Checkbox id="terms" :disabled="props.disabled" />
     <label
       for="terms"
-      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
     >
       Accept terms and conditions
     </label>

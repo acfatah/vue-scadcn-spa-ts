@@ -23,9 +23,9 @@ const disabled = inject('disabled', false)
     v-bind="forwardedProps"
     :class="
       cn(
-        'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 disabled:cursor-not-allowed',
+        'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50 disabled:cursor-not-allowed',
         props.class,
-        { 'opacity-70 cursor-not-allowed': props.disabled || disabled },
+        { 'opacity-50 cursor-not-allowed': props.disabled || disabled },
       )
     "
   >
