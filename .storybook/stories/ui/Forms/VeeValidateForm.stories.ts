@@ -1,0 +1,64 @@
+import type { StoryObj } from '@storybook/vue3'
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormFieldArray,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '~/components/ui/form'
+import { Toaster } from '~/components/ui/toast'
+import DefaultStory from './DefaultStory.vue'
+import DefaultSource from './DefaultStory.vue?raw'
+
+/**
+ * Forms using Vee Validate.
+ *
+ * Primitive API Reference: https://vee-validate.logaretm.com/v4/guide/components/handling-forms
+ */
+export default {
+  title: 'Forms/Vee Validate',
+  component: DefaultStory,
+  subcomponents: {
+    Form,
+    FormControl,
+    FormDescription,
+    FormField,
+    FormFieldArray,
+    FormItem,
+    FormLabel,
+    FormMessage,
+  },
+  tags: ['autodocs'],
+}
+
+export const Default: StoryObj = {
+  parameters: {
+    docs: {
+      source: {
+        code: DefaultSource,
+      },
+    },
+  },
+
+  args: {
+    disabled: false,
+  },
+
+  render: args => ({
+    components: { DefaultStory, Toaster },
+
+    setup() {
+      return { args }
+    },
+
+    template: `
+      <Teleport to="body">
+        <Toaster />
+      </Teleport>
+      <DefaultStory v-bind="args" />
+    `,
+  }),
+}
