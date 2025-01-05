@@ -14,12 +14,12 @@ import DefaultStory from './DefaultStory.vue'
 import DefaultSource from './DefaultStory.vue?raw'
 
 /**
- * Forms using Vee Validate.
+ * Form handling using Vee Validate.
  *
  * Primitive API Reference: https://vee-validate.logaretm.com/v4/guide/components/handling-forms
  */
 export default {
-  title: 'Forms/Vee Validate',
+  title: 'Forms/Form',
   component: DefaultStory,
   subcomponents: {
     Form,
