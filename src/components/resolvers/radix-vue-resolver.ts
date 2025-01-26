@@ -21,6 +21,7 @@ export default function (componentName: string) {
     { name: 'ComboboxRoot', from: 'radix-vue' },
     { name: 'ComboboxTrigger', from: 'radix-vue' },
     { name: 'ComboboxViewport', from: 'radix-vue' },
+    { name: 'ContextMenuPortal', from: 'radix-vue' },
     { name: 'PaginationRoot', as: 'Pagination', from: 'radix-vue' },
     { name: 'PaginationList', from: 'radix-vue' },
     { name: 'PaginationListItem', from: 'radix-vue' },
