@@ -1,0 +1,11 @@
+<script setup lang="ts">
+import { type DateValue, getLocalTimeZone, today } from '@internationalized/date'
+import { type Ref, ref } from 'vue'
+import { Calendar } from '~/components/ui/calendar'
+
+const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
+</script>
+
+<template>
+  <Calendar v-model="value" weekday-format="short" class="w-fit rounded-md border" />
+</template>
