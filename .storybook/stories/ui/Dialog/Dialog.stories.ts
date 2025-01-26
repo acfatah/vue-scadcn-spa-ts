@@ -26,9 +26,14 @@ import ScrollOverlaySource from './ScrollOverlay.vue?raw'
 
 /**
  * A modal dialog that interrupts the user with important content and expects a response.
+ *
+ * Primitive API Reference: https://www.radix-vue.com/components/dialog
+ *
+ * See also:
+ * - [Feedback/Alert Dialog](?path=/docs/feedback-alert-dialog--docs) component
  */
 export default {
-  title: 'Overlays/Dialog',
+  title: 'Feedback/Dialog',
   component: DefaultStory,
   subcomponents: {
     Dialog,
